@@ -25,10 +25,21 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Where do these creatures come from?", acceptedAnswer: { "@type": "Answer", text: "Our list includes creatures from Greek, Norse, Japanese, Celtic, Persian, Inuit, Native American, and other world mythologies." } },
+    { "@type": "Question", name: "Can I use these for D&D or writing?", acceptedAnswer: { "@type": "Answer", text: "Yes — mythical creatures make great inspiration for D&D encounters, fantasy writing, game design, and worldbuilding." } },
+    { "@type": "Question", name: "How many creatures are in the list?", acceptedAnswer: { "@type": "Answer", text: "Our generator includes 42 mythical creatures from world mythology, each with a description." } },
+  ],
+};
+
 export default function MythicalCreaturePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <MythicalCreatureClient />
     </>
   );

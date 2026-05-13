@@ -16,6 +16,16 @@ const jsonLd = {
   operatingSystem: "Any", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What is zalgo text?", acceptedAnswer: { "@type": "Answer", text: "Zalgo text uses Unicode combining characters that stack above and below letters, creating a distorted 'corrupted' visual effect." } },
+    { "@type": "Question", name: "Will weird text work on Instagram or TikTok?", acceptedAnswer: { "@type": "Answer", text: "Yes — all styles use real Unicode characters that display on most platforms, including Instagram, TikTok, Twitter, and Discord." } },
+    { "@type": "Question", name: "What is vaporwave text?", acceptedAnswer: { "@type": "Answer", text: "Vaporwave (fullwidth) text uses Unicode fullwidth characters that are wider than normal, giving a retro, aesthetic feel popular in memes and social media." } },
+  ],
+};
+
 export default function Page() {
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><WeirdTextClient /></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} /><WeirdTextClient /></>);
 }

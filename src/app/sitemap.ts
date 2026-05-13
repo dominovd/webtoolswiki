@@ -29,6 +29,15 @@ const tools = [
   { url: "/mythical-creature-generator",     priority: 0.7 },
   { url: "/disney-character-generator",      priority: 0.7 },
   { url: "/wu-tang-name-generator",          priority: 0.7 },
+  // Utility generators
+  { url: "/password-generator",              priority: 0.9 },
+  { url: "/random-name-generator",           priority: 0.9 },
+  { url: "/username-generator",              priority: 0.9 },
+  { url: "/random-number-generator",         priority: 0.8 },
+  { url: "/business-name-generator",         priority: 0.8 },
+  { url: "/nickname-generator",              priority: 0.8 },
+  { url: "/team-name-generator",             priority: 0.8 },
+  { url: "/rap-name-generator",              priority: 0.7 },
   // Static pages
   { url: "/about",                           priority: 0.5 },
   { url: "/contact",                         priority: 0.5 },

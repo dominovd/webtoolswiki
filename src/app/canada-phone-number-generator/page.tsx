@@ -25,10 +25,21 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Are these real Canadian phone numbers?", acceptedAnswer: { "@type": "Answer", text: "No — they use real Canadian area codes in valid NANP formats but are not assigned to real people or businesses." } },
+    { "@type": "Question", name: "Which provinces are covered?", acceptedAnswer: { "@type": "Answer", text: "All Canadian provinces and territories are covered, including Ontario, Quebec, British Columbia, Alberta, Manitoba, and more." } },
+    { "@type": "Question", name: "What formats are supported?", acceptedAnswer: { "@type": "Answer", text: "(416) 555-5555, 416-555-5555, +1-416-555-5555, and other standard formats." } },
+  ],
+};
+
 export default function CanadaPhonePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <CanadaPhoneClient />
     </>
   );

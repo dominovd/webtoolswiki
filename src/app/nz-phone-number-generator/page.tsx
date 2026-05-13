@@ -25,10 +25,21 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Are these real New Zealand phone numbers?", acceptedAnswer: { "@type": "Answer", text: "No — they use real NZ area codes in valid formats but are not assigned to real people." } },
+    { "@type": "Question", name: "What formats are available?", acceptedAnswer: { "@type": "Answer", text: "(09) XXX XXXX, +64 9 XXX XXXX, and NZ mobile 02X XXX XXXX formats." } },
+    { "@type": "Question", name: "Which regions are covered?", acceptedAnswer: { "@type": "Answer", text: "Auckland, Wellington, Christchurch, Hamilton, Dunedin, and other major NZ regions plus mobile numbers." } },
+  ],
+};
+
 export default function NZPhonePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <NZPhoneClient />
     </>
   );

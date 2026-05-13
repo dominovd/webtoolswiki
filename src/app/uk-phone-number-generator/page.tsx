@@ -25,10 +25,21 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Are these real UK phone numbers?", acceptedAnswer: { "@type": "Answer", text: "No — they use real UK area codes in valid formats but are not assigned to real people or businesses." } },
+    { "@type": "Question", name: "What formats are available?", acceptedAnswer: { "@type": "Answer", text: "+44 20 XXXX XXXX, 020 XXXX XXXX, and mobile 07XXX XXXXXX formats." } },
+    { "@type": "Question", name: "Which regions are covered?", acceptedAnswer: { "@type": "Answer", text: "London, Manchester, Birmingham, Leeds, Glasgow, Edinburgh, Bristol, and other major UK cities plus mobile numbers." } },
+  ],
+};
+
 export default function UKPhonePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <UKPhoneClient />
     </>
   );

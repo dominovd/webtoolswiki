@@ -25,10 +25,21 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Are generated IMEIs valid?", acceptedAnswer: { "@type": "Answer", text: "Generated IMEIs pass the Luhn checksum algorithm used to validate IMEI format. They are not registered to real devices and should only be used for testing or development." } },
+    { "@type": "Question", name: "What is an IMEI number?", acceptedAnswer: { "@type": "Answer", text: "IMEI (International Mobile Equipment Identity) is a unique 15-digit number that identifies mobile devices. It's used by networks to identify valid devices." } },
+    { "@type": "Question", name: "Can I use these IMEIs for app testing?", acceptedAnswer: { "@type": "Answer", text: "Yes — these are the primary use case. They pass format validation checks but are not associated with real devices." } },
+  ],
+};
+
 export default function IMEIPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <IMEIClient />
     </>
   );

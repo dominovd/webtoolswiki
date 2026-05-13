@@ -24,10 +24,21 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What difficulty levels are available?", acceptedAnswer: { "@type": "Answer", text: "Easy (simple objects anyone can draw), Medium (actions and concepts), and Hard (abstract ideas that are challenging to illustrate)." } },
+    { "@type": "Question", name: "Can I use this for charades?", acceptedAnswer: { "@type": "Answer", text: "Yes — the word categories work equally well for charades, Pictionary, drawing games, and other party games." } },
+    { "@type": "Question", name: "How many words can I generate at once?", acceptedAnswer: { "@type": "Answer", text: "Generate 1, 5, or 10 words per round. Switch difficulties between rounds to keep the game interesting." } },
+  ],
+};
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <PictionaryClient />
     </>
   );

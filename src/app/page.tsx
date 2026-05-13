@@ -52,11 +52,25 @@ const categories = [
     ],
   },
   {
+    label: "Utility generators",
+    color: "bg-teal-600",
+    tools: [
+      { name: "Password Generator", href: "/password-generator", desc: "Strong random passwords with custom options", icon: "🔐" },
+      { name: "Random Name Generator", href: "/random-name-generator", desc: "Realistic fake names for testing & privacy", icon: "👤" },
+      { name: "Username Generator", href: "/username-generator", desc: "Cool usernames for gaming & social media", icon: "@" },
+      { name: "Random Number Generator", href: "/random-number-generator", desc: "Random integers or decimals in any range", icon: "🎲" },
+      { name: "Business Name Generator", href: "/business-name-generator", desc: "Creative brand & company name ideas", icon: "🏢" },
+      { name: "Nickname Generator", href: "/nickname-generator", desc: "Cute, cool, or funny nicknames for anyone", icon: "😎" },
+    ],
+  },
+  {
     label: "Gaming & fun",
     color: "bg-green-600",
     tools: [
       { name: "Xbox Gamertag Generator", href: "/xbox-gamertag-generator", desc: "Cool names for Xbox, PSN, Steam", icon: "🎮" },
-      { name: "Wu-Tang Name Generator", href: "/wu-tang-name-generator", desc: "Get your official Wu-Tang Clan name", icon: "🎤" },
+      { name: "Team Name Generator", href: "/team-name-generator", desc: "Sports, trivia, office & fantasy football names", icon: "🏆" },
+      { name: "Rap Name Generator", href: "/rap-name-generator", desc: "Get your rapper name in seconds", icon: "🎤" },
+      { name: "Wu-Tang Name Generator", href: "/wu-tang-name-generator", desc: "Get your official Wu-Tang Clan name", icon: "🎵" },
       { name: "Disney Character Generator", href: "/disney-character-generator", desc: "Discover a random Disney/Pixar character", icon: "🏰" },
       { name: "Mythical Creature Generator", href: "/mythical-creature-generator", desc: "Random fantasy creatures from world mythology", icon: "🐉" },
       { name: "Quirk Generator", href: "/quirk-generator", desc: "Random character quirks for D&D & writing", icon: "🎭" },
@@ -65,7 +79,7 @@ const categories = [
 ];
 
 const stats = [
-  { num: "21+", label: "Free tools" },
+  { num: "29+", label: "Free tools" },
   { num: "700K+", label: "Monthly searches" },
   { num: "0", label: "Sign-ups needed" },
 ];

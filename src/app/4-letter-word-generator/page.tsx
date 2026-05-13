@@ -24,10 +24,21 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Are these real English words?", acceptedAnswer: { "@type": "Answer", text: "Yes — all words in our list are common English words. They're great for word games, Scrabble practice, and creative writing." } },
+    { "@type": "Question", name: "Can I use these for Wordle?", acceptedAnswer: { "@type": "Answer", text: "Wordle uses 5-letter words, but our 4-letter word generator is great for similar word games like Wordle variants and other puzzles." } },
+    { "@type": "Question", name: "How many words can I generate?", acceptedAnswer: { "@type": "Answer", text: "You can generate 1, 5, 10, 20, or 50 words at a time from our list of 160+ common 4-letter words." } },
+  ],
+};
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <FourLetterClient />
     </>
   );

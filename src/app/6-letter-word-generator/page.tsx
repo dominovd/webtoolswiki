@@ -24,10 +24,21 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Are these common English words?", acceptedAnswer: { "@type": "Answer", text: "Yes — our list focuses on frequently used 6-letter English words suitable for word games, writing, and puzzles." } },
+    { "@type": "Question", name: "Can I use 6-letter words in Scrabble?", acceptedAnswer: { "@type": "Answer", text: "Yes, and they can score very well — especially if you can use all 7 tiles for a bingo." } },
+    { "@type": "Question", name: "How many words can I generate?", acceptedAnswer: { "@type": "Answer", text: "Generate 1, 5, 10, 20, or 50 words at a time from our curated list of 250+ six-letter words." } },
+  ],
+};
+
 export default function Page() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <SixLetterClient />
     </>
   );

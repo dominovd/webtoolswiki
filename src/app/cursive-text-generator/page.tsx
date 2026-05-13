@@ -25,6 +25,16 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Does cursive text work on Instagram and TikTok?", acceptedAnswer: { "@type": "Answer", text: "Yes — these are real Unicode characters, not images. They paste directly into Instagram bios, TikTok captions, Twitter, Discord, and most other platforms." } },
+    { "@type": "Question", name: "Why do some letters look different from real cursive?", acceptedAnswer: { "@type": "Answer", text: "The styles use Unicode mathematical script letters, which closely resemble cursive but are available as plain text. Not all letters have perfect cursive equivalents." } },
+    { "@type": "Question", name: "Can I use cursive text in emails or Google Docs?", acceptedAnswer: { "@type": "Answer", text: "Yes. Because these are Unicode characters, they appear in any app that supports text — including Gmail, Google Docs, Word, and messaging apps." } },
+  ],
+};
+
 export default function CursivePage() {
   return (
     <>
@@ -32,6 +42,7 @@ export default function CursivePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <CursiveClient />
     </>
   );

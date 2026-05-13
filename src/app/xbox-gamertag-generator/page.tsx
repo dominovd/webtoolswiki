@@ -25,10 +25,21 @@ const jsonLd = {
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Will these gamertags be available on Xbox?", acceptedAnswer: { "@type": "Answer", text: "Availability isn't guaranteed — popular words may already be taken. Check availability in Xbox settings after generating." } },
+    { "@type": "Question", name: "Can I use these on PlayStation or Steam?", acceptedAnswer: { "@type": "Answer", text: "Yes — generated names work as usernames on any gaming platform, not just Xbox." } },
+    { "@type": "Question", name: "How many characters can an Xbox gamertag be?", acceptedAnswer: { "@type": "Answer", text: "Xbox gamertags can be up to 12 characters. Our generator respects this limit for Classic and Short styles." } },
+  ],
+};
+
 export default function XboxPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <XboxClient />
     </>
   );

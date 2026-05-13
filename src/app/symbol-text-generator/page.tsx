@@ -16,6 +16,16 @@ const jsonLd = {
   operatingSystem: "Any", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "How do I copy a symbol?", acceptedAnswer: { "@type": "Answer", text: "Click any symbol to copy it to your clipboard instantly. You can also click '+' to add it to your collection, then copy all at once." } },
+    { "@type": "Question", name: "Will these symbols work everywhere?", acceptedAnswer: { "@type": "Answer", text: "Most Unicode symbols display correctly on modern devices, browsers, and apps. Older systems may show boxes or question marks for some symbols." } },
+    { "@type": "Question", name: "Can I use symbols in Instagram bio or TikTok?", acceptedAnswer: { "@type": "Answer", text: "Yes! Unicode symbols paste directly into social media bios, captions, and usernames on most platforms." } },
+  ],
+};
+
 export default function Page() {
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><SymbolTextClient /></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} /><SymbolTextClient /></>);
 }

@@ -16,6 +16,17 @@ const jsonLd = {
   operatingSystem: "Any", offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What is subscript text?", acceptedAnswer: { "@type": "Answer", text: "Subscript text appears below the normal baseline — like the '2' in H₂O. Our generator uses Unicode subscript characters that work in plain text." } },
+    { "@type": "Question", name: "Can I use subscript for chemistry?", acceptedAnswer: { "@type": "Answer", text: "Yes! H₂O, CO₂, CH₄ — all digits 0–9 have subscript equivalents. Most common lowercase letters also work. Great for chemical formulas in plain text." } },
+    { "@type": "Question", name: "Why do some letters look the same?", acceptedAnswer: { "@type": "Answer", text: "Not all letters have Unicode subscript versions. Letters without a subscript equivalent are shown as-is." } },
+    { "@type": "Question", name: "Does this work in Google Docs or Word?", acceptedAnswer: { "@type": "Answer", text: "Yes — these are real Unicode characters, not formatting. They paste as plain text and appear subscript on any platform that renders Unicode." } },
+  ],
+};
+
 export default function Page() {
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><SubscriptClient /></>);
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} /><SubscriptClient /></>);
 }
