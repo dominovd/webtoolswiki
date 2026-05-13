@@ -13,7 +13,26 @@ export const metadata: Metadata = {
   description:
     "Free online generators and tools – phone numbers, text effects, gamertags, IMEI, anagrams, and more. Fast, simple, no sign-up required.",
   metadataBase: new URL("https://webtoolswiki.com"),
-  openGraph: { siteName: "WebToolsWiki", type: "website" },
+  openGraph: {
+    siteName: "WebToolsWiki",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    site: "@webtoolswiki",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

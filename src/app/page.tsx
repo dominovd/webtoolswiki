@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Free Online Generators & Tools – WebToolsWiki",
   description:
     "100+ free online generators: cursive text, phone numbers, IMEI, gamertags, anagrams, and more. No sign-up, works instantly in your browser.",
+  alternates: {
+    canonical: "https://webtoolswiki.com",
+  },
+  openGraph: {
+    title: "Free Online Generators & Tools – WebToolsWiki",
+    description: "100+ free tools: cursive text, IMEI, phone numbers, gamertags, anagrams. Instant, free, no sign-up.",
+    url: "https://webtoolswiki.com",
+    type: "website",
+  },
 };
 
 const categories = [
