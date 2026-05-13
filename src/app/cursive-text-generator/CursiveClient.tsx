@@ -1,0 +1,100 @@
+"use client";
+import { useState } from "react";
+import ToolLayout from "@/components/ToolLayout";
+
+function convertText(input: string, type: string): string {
+  const map: Record<string, [number, number]> = {
+    script:      [0x1d4ea, 0x1d4d0],
+    bold_script: [0x1d4ea + 26, 0x1d4d0 + 26],
+    italic:      [0x1d44e, 0x1d434],
+    double:      [0x1d552, 0x1d538],
+  };
+  const specials: Record<string, Record<string, string>> = {
+    script: { e: "𝑒", g: "𝑔", o: "𝑜", A: "𝒜", B: "𝐵", E: "𝐸", F: "𝐹", H: "𝐻", I: "𝐼", L: "𝐿", M: "𝑀", R: "𝑅" },
+    italic: { h: "ℎ" },
+  };
+
+  const [lBase, uBase] = map[type] ?? [0x1d4ea, 0x1d4d0];
+
+  return input.split("").map((ch) => {
+    const sp = specials[type]?.[ch];
+    if (sp) return sp;
+    if (ch >= "a" && ch <= "z") return String.fromCodePoint(lBase + ch.charCodeAt(0) - 97);
+    if (ch >= "A" && ch <= "Z") return String.fromCodePoint(uBase + ch.charCodeAt(0) - 65);
+    return ch;
+  }).join("");
+}
+
+const styles = [
+  { key: "script",      label: "Cursive Script",   preview: "𝒶𝒷𝒸" },
+  { key: "bold_script", label: "Bold Cursive",      preview: "𝓪𝓫𝓬" },
+  { key: "italic",      label: "Italic",            preview: "𝑎𝑏𝑐" },
+  { key: "double",      label: "Double Struck",     preview: "𝕒𝕓𝕔" },
+];
+
+export default function CursiveClient() {
+  const [input, setInput]   = useState("");
+  const [copied, setCopied] = useState<string | null>(null);
+
+  const handleCopy = (text: string, key: string) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(key);
+      setTimeout(() => setCopied(null), 2000);
+    });
+  };
+
+  return (
+    <ToolLayout
+      title="Cursive Text Generator"
+      description="Type any text and instantly convert it to cursive and fancy Unicode styles. Copy and paste anywhere — Instagram, TikTok, Twitter, Discord bios, and more."
+      relatedTools={[
+        { name: "Anagram Generator",           href: "/anagram-generator" },
+        { name: "Xbox Gamertag Generator",      href: "/xbox-gamertag-generator" },
+        { name: "IMEI Generator",               href: "/imei-generator" },
+      ]}
+      faqItems={[
+        { q: "How does the cursive text generator work?",
+          a: "It maps each letter to its Unicode equivalent in mathematical script, bold script, or italic alphabets. These are standard Unicode characters that render in cursive-like styles on most platforms." },
+        { q: "Can I use cursive text on Instagram or TikTok?",
+          a: "Yes! Unicode cursive characters work in Instagram bios, captions, TikTok bios, Twitter/X profiles, Discord usernames, and most social media platforms." },
+        { q: "Why do some characters not convert?",
+          a: "Numbers, punctuation, and special symbols don't have Unicode script equivalents and appear as-is. Only standard a–z and A–Z letters are converted." },
+        { q: "Is the generated text a font?",
+          a: "No — it's regular Unicode text, not a font. That's why it can be copied and pasted anywhere without installing anything." },
+      ]}
+    >
+      <label className="block text-sm font-medium text-gray-700 mb-2">Enter your text</label>
+      <textarea
+        className="w-full rounded-xl border border-gray-300 px-4 py-3 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+        rows={3}
+        placeholder="Type something here…"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+
+      {input ? (
+        <div className="mt-6 space-y-4">
+          {styles.map(({ key, label }) => {
+            const converted = convertText(input, key);
+            return (
+              <div key={key} className="rounded-xl border border-gray-100 bg-gray-50 p-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-xs font-medium text-gray-400 uppercase tracking-wide">{label}</span>
+                  <button
+                    onClick={() => handleCopy(converted, key)}
+                    className="text-xs px-3 py-1 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors"
+                  >
+                    {copied === key ? "Copied!" : "Copy"}
+                  </button>
+                </div>
+                <p className="text-xl text-gray-800 break-all">{converted}</p>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <p className="mt-4 text-sm text-gray-400 text-center">Start typing to see cursive styles appear below</p>
+      )}
+    </ToolLayout>
+  );
+}

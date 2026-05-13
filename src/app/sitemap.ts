@@ -1,0 +1,29 @@
+import { MetadataRoute } from "next";
+
+const baseUrl = "https://webtoolswiki.com";
+
+const tools = [
+  { url: "/cursive-text-generator", priority: 0.9 },
+  { url: "/imei-generator", priority: 0.9 },
+  { url: "/us-phone-number-generator", priority: 0.9 },
+  { url: "/xbox-gamertag-generator", priority: 0.9 },
+  { url: "/canada-phone-number-generator", priority: 0.8 },
+  { url: "/anagram-generator", priority: 0.8 },
+];
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    ...tools.map((t) => ({
+      url: `${baseUrl}${t.url}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: t.priority,
+    })),
+  ];
+}
