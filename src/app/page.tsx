@@ -22,30 +22,51 @@ const categories = [
     color: "bg-violet-600",
     tools: [
       { name: "Cursive Text Generator", href: "/cursive-text-generator", desc: "Convert text to Unicode cursive styles", vol: "90K/mo", icon: "✍️", badge: "bg-violet-50 text-violet-700" },
-      { name: "Anagram Generator", href: "/anagram-generator", desc: "Rearrange letters into anagrams", vol: "71K/mo", icon: "🔀", badge: "bg-violet-50 text-violet-700" },
+      { name: "Anagram Generator", href: "/anagram-generator", desc: "Rearrange letters into new words", vol: "71K/mo", icon: "🔀", badge: "bg-violet-50 text-violet-700" },
+      { name: "Weird Text Generator", href: "/weird-text-generator", desc: "Glitch, zalgo, bubble, vaporwave styles", vol: "40K/mo", icon: "Z̷", badge: "bg-violet-50 text-violet-700" },
+      { name: "Symbol Text Generator", href: "/symbol-text-generator", desc: "Hearts, stars, arrows & 200+ symbols", vol: "35K/mo", icon: "★", badge: "bg-violet-50 text-violet-700" },
+      { name: "Superscript Generator", href: "/superscript-generator", desc: "Tiny raised Unicode letters & numbers", vol: "25K/mo", icon: "ˢ", badge: "bg-violet-50 text-violet-700" },
+      { name: "Subscript Generator", href: "/subscript-generator", desc: "Chemical formulas & subscript text", vol: "18K/mo", icon: "₄", badge: "bg-violet-50 text-violet-700" },
     ],
   },
   {
-    label: "Fake data",
+    label: "Word generators",
+    color: "bg-amber-500",
+    tools: [
+      { name: "Pictionary Word Generator", href: "/pictionary-word-generator", desc: "Easy, medium & hard drawing game words", vol: "22K/mo", icon: "🎨", badge: "bg-amber-50 text-amber-700" },
+      { name: "5-Letter Word Generator", href: "/5-letter-word-generator", desc: "Random 5-letter words — great for Wordle", vol: "12K/mo", icon: "5️⃣", badge: "bg-amber-50 text-amber-700" },
+      { name: "4-Letter Word Generator", href: "/4-letter-word-generator", desc: "Random 4-letter words for word games", vol: "13K/mo", icon: "4️⃣", badge: "bg-amber-50 text-amber-700" },
+      { name: "6-Letter Word Generator", href: "/6-letter-word-generator", desc: "Random 6-letter words for Scrabble & puzzles", vol: "5K/mo", icon: "6️⃣", badge: "bg-amber-50 text-amber-700" },
+    ],
+  },
+  {
+    label: "Phone number generators",
     color: "bg-blue-600",
     tools: [
+      { name: "US Phone Number Generator", href: "/us-phone-number-generator", desc: "Real area codes, multiple formats", vol: "147K/mo", icon: "🇺🇸", badge: "bg-blue-50 text-blue-700" },
       { name: "IMEI Generator", href: "/imei-generator", desc: "Valid-format IMEI with Luhn checksum", vol: "185K/mo", icon: "📱", badge: "bg-blue-50 text-blue-700" },
-      { name: "US Phone Number Generator", href: "/us-phone-number-generator", desc: "Real area codes, multiple formats", vol: "147K/mo", icon: "📞", badge: "bg-blue-50 text-blue-700" },
       { name: "Canada Phone Number Generator", href: "/canada-phone-number-generator", desc: "By province, NANP-compliant", vol: "41K/mo", icon: "🇨🇦", badge: "bg-blue-50 text-blue-700" },
+      { name: "UK Phone Number Generator", href: "/uk-phone-number-generator", desc: "UK area codes + mobile 07XXX formats", vol: "30K/mo", icon: "🇬🇧", badge: "bg-blue-50 text-blue-700" },
+      { name: "Australia Phone Number Generator", href: "/au-phone-number-generator", desc: "AU state codes + +61 international format", vol: "20K/mo", icon: "🇦🇺", badge: "bg-blue-50 text-blue-700" },
+      { name: "New Zealand Phone Generator", href: "/nz-phone-number-generator", desc: "NZ area codes + +64 international format", vol: "8K/mo", icon: "🇳🇿", badge: "bg-blue-50 text-blue-700" },
     ],
   },
   {
-    label: "Gaming",
+    label: "Gaming & fun",
     color: "bg-green-600",
     tools: [
       { name: "Xbox Gamertag Generator", href: "/xbox-gamertag-generator", desc: "Cool names for Xbox, PSN, Steam", vol: "92K/mo", icon: "🎮", badge: "bg-green-50 text-green-700" },
+      { name: "Wu-Tang Name Generator", href: "/wu-tang-name-generator", desc: "Get your official Wu-Tang Clan name", vol: "18K/mo", icon: "🎤", badge: "bg-green-50 text-green-700" },
+      { name: "Disney Character Generator", href: "/disney-character-generator", desc: "Discover a random Disney/Pixar character", vol: "15K/mo", icon: "🏰", badge: "bg-green-50 text-green-700" },
+      { name: "Mythical Creature Generator", href: "/mythical-creature-generator", desc: "Random fantasy creatures from world mythology", vol: "12K/mo", icon: "🐉", badge: "bg-green-50 text-green-700" },
+      { name: "Quirk Generator", href: "/quirk-generator", desc: "Random character quirks for D&D & writing", vol: "9K/mo", icon: "🎭", badge: "bg-green-50 text-green-700" },
     ],
   },
 ];
 
 const stats = [
-  { num: "100+", label: "Free tools" },
-  { num: "500K+", label: "Monthly searches" },
+  { num: "21+", label: "Free tools" },
+  { num: "700K+", label: "Monthly searches" },
   { num: "0", label: "Sign-ups needed" },
 ];
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
 
         <main className="flex-1">{children}</main>
+        <Analytics />
 
         {/* Footer */}
         <footer className="border-t border-gray-100 bg-gray-50 py-10">
@@ -122,7 +124,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     { label: "IMEI Generator", href: "/imei-generator" },
                     { label: "US Phone Number Generator", href: "/us-phone-number-generator" },
                     { label: "Xbox Gamertag Generator", href: "/xbox-gamertag-generator" },
-                    { label: "Canada Phone Number", href: "/canada-phone-number-generator" },
+                    { label: "Weird Text Generator", href: "/weird-text-generator" },
+                    { label: "Pictionary Word Generator", href: "/pictionary-word-generator" },
+                    { label: "Wu-Tang Name Generator", href: "/wu-tang-name-generator" },
                     { label: "Anagram Generator", href: "/anagram-generator" },
                   ].map((l) => (
                     <Link key={l.href} href={l.href} className="text-xs text-gray-400 hover:text-gray-700 transition-colors">
