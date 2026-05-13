@@ -131,10 +131,32 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ))}
                 </div>
               </div>
+
+              <div>
+                <p className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-3">Company</p>
+                <div className="flex flex-col gap-2">
+                  {[
+                    { label: "About Us", href: "/about" },
+                    { label: "Contact", href: "/contact" },
+                    { label: "Privacy Policy", href: "/privacy" },
+                  ].map((l) => (
+                    <Link key={l.href} href={l.href} className="text-xs text-gray-400 hover:text-gray-700 transition-colors">
+                      {l.label}
+                    </Link>
+                  ))}
+                  <a href="mailto:info@webtoolswiki.com" className="text-xs text-gray-400 hover:text-gray-700 transition-colors">
+                    info@webtoolswiki.com
+                  </a>
+                </div>
+              </div>
             </div>
 
             <p className="mt-8 text-xs text-gray-300 border-t border-gray-100 pt-6">
               © {new Date().getFullYear()} WebToolsWiki. All tools are free to use.
+              {" · "}
+              <Link href="/privacy" className="hover:text-gray-500 transition-colors">Privacy</Link>
+              {" · "}
+              <Link href="/contact" className="hover:text-gray-500 transition-colors">Contact</Link>
             </p>
           </div>
         </footer>
