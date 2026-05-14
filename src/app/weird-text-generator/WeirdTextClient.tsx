@@ -51,6 +51,45 @@ export default function WeirdTextClient() {
     navigator.clipboard.writeText(text).then(() => { setCopied(key); setTimeout(()=>setCopied(null),2000); });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Weird Text Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A weird text generator transforms normal text into eye-catching Unicode styles that stand out in social media posts, bios, and messages. Unlike regular bold or italic formatting that only works in certain apps, these styles use actual Unicode characters that display anywhere text is supported — including Instagram, TikTok, Twitter, Discord, and WhatsApp. Our generator offers six distinct styles from bubble text to corrupted zalgo glitch effects.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Weird Text Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Type or paste your text into the input box at the top.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>All six styles preview simultaneously: Bubble, Upside Down, Strikethrough, Vaporwave, Zalgo Glitch, and Mocking.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Copy" next to any style you want to use.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Paste directly into Instagram captions, TikTok bios, Discord messages, Twitter posts, or anywhere else.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Making Instagram bios and TikTok profiles stand out with unique text styling</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Adding ᵥₐₚₒᵣwₐᵥₑ or glitch aesthetics to social media posts</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating eye-catching Discord server names or usernames</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Using S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶ text for humorous or stylistic effect in messages</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Weird Text Generator"
@@ -66,6 +105,7 @@ export default function WeirdTextClient() {
         { q: "Will weird text work on Instagram or TikTok?", a: "Yes — all styles use real Unicode characters that display on most platforms, including Instagram, TikTok, Twitter, and Discord." },
         { q: "What is vaporwave text?", a: "Vaporwave (fullwidth) text uses Unicode fullwidth characters that are wider than normal, giving a retro, aesthetic feel popular in memes and social media." },
       ]}
+      guide={guide}
     >
       <div>
         <label className="block text-xs font-medium text-gray-500 mb-2">Enter your text</label>

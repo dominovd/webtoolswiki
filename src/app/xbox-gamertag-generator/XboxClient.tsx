@@ -55,10 +55,50 @@ export default function XboxClient() {
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Gamertag Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A gamertag generator creates unique, creative usernames specifically designed for gaming platforms like Xbox, PlayStation Network (PSN), and Steam. A great gamertag should be memorable, easy to say, and reflect your gaming persona. Our generator combines curated adjectives and nouns into names that feel authentically gamer-friendly, across multiple style options.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Gamertag Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select a style: Classic (adjective + noun), Numbers (with random digits), Short (compact names under 8 chars), CAPS (all uppercase), or Xtra Cool (edgy with X/Z/K letters).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Click "Generate" to create 10 gamertag options.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Check availability on your gaming platform of choice.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy the gamertag and use it on Xbox, PSN, Steam, Discord, or anywhere else.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating a new Xbox Live or PlayStation Network gamertag</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding a unique Steam username that isn't already taken</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Setting up a Discord handle for a gaming server</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming a gaming YouTube channel or Twitch stream</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Xbox Gamertag Generator"
       description="Generate cool, unique Xbox gamertag ideas instantly. Pick a style, choose how many, and find the perfect gamertag for your Xbox or PC gaming account."
+      guide={guide}
       relatedTools={[
         { name: "Anagram Generator", href: "/anagram-generator" },
         { name: "Cursive Text Generator", href: "/cursive-text-generator" },

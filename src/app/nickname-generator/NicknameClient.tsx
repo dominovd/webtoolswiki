@@ -100,6 +100,45 @@ export default function NicknameClient({ faqItems }: { faqItems: { q: string; a:
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Nickname Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A nickname generator creates personalised, fun alternatives to someone's real name. Nicknames can be cute, cool, funny, or gamer-style depending on the context. Whether you need a sweet nickname for a friend, an edgy alias for gaming, or a silly name for a group chat, our generator transforms any name into something memorable with just one click.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Nickname Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Type a name — your own, a friend's, or any word — into the input box.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Select a style: Cute (sweet, affectionate), Cool (edgy, confident), Funny (humorous, playful), or Gamer (gaming platform-ready).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate" to get 8 nickname ideas.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy any nickname you like and use it on social media, messaging apps, or gaming platforms.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating a cute pet name or term of endearment for a friend or partner</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding a cool gaming alias for Xbox, Discord, or Roblox</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating funny group chat names based on someone's real name</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Coming up with a social media username based on your actual name</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Nickname Generator"
@@ -112,6 +151,7 @@ export default function NicknameClient({ faqItems }: { faqItems: { q: string; a:
         { name: "Xbox Gamertag Generator", href: "/xbox-gamertag-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       <div className="mb-5">
         <label className="block text-sm font-medium text-gray-700 mb-2">

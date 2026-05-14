@@ -102,6 +102,45 @@ export default function UsernameClient({ faqItems }: { faqItems: FaqItem[] }) {
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Username Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A username generator creates unique, creative usernames for social media, gaming platforms, forums, and apps. A good username should be memorable, available, and reflect your personality or brand. Our generator offers five distinct styles — from classic combinations to gamer tags and aesthetic handles — so you can find the perfect fit for any platform.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Username Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Optionally enter a keyword or your name to personalise the results.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Select a username style: Classic, Gamer, Aesthetic, Dark, or Professional.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate" to see 10 username suggestions instantly.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy any username you like and check its availability on your target platform.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating a unique gaming handle for Xbox, PlayStation, or Steam</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding an available Instagram, TikTok, or Twitter username</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Setting up a Discord or Reddit account name</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating professional usernames for LinkedIn or work tools</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Username Generator"
@@ -113,6 +152,7 @@ export default function UsernameClient({ faqItems }: { faqItems: FaqItem[] }) {
         { name: "Random Name Generator", href: "/random-name-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       <div className="grid sm:grid-cols-2 gap-4 mb-5">
         <div>

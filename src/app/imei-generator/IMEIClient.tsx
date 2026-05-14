@@ -44,10 +44,50 @@ export default function IMEIClient() {
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is an IMEI Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">An IMEI (International Mobile Equipment Identity) generator creates 15-digit numbers that follow the valid IMEI format and pass the Luhn checksum algorithm. These generated IMEIs are structurally identical to real device IMEIs but are not registered to any actual device. They are widely used by developers, QA engineers, and researchers who need valid-format IMEI numbers without using real device identifiers.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the IMEI Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select the device brand (iPhone, Samsung, Pixel, or Random) to use a realistic TAC prefix for that manufacturer.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose how many IMEIs to generate — from 1 up to 50.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate" to create a fresh batch of valid-format IMEIs.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy individual IMEIs or use "Copy All" to grab the full list for your test data.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Testing mobile app features that validate or display IMEI numbers</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Seeding development databases with realistic device identifiers</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>QA testing form validation for IMEI input fields</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Academic research and education about mobile device identification</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="IMEI Generator"
       description="Generate random, valid-format IMEI numbers for testing. Choose a device type or generate fully random IMEIs with correct Luhn checksum."
+      guide={guide}
       relatedTools={[
         { name: "US Phone Number Generator",     href: "/us-phone-number-generator" },
         { name: "Canada Phone Number Generator", href: "/canada-phone-number-generator" },

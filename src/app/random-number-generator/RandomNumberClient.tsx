@@ -85,6 +85,49 @@ export default function RandomNumberClient({ faqItems }: { faqItems: FaqItem[] }
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Random Number Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A random number generator (RNG) produces numbers with no predictable pattern within a defined range. Random numbers are used everywhere from lotteries and games to scientific simulations and statistical sampling. Our generator lets you customise the range, quantity, and format — integers or decimals — and ensures you get genuinely unpredictable results every time.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Random Number Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Set your minimum and maximum values to define the range (e.g. 1 to 100).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose how many numbers to generate — from 1 up to 100.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Toggle "Allow decimals" for decimal results, or keep integers for whole numbers.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Enable "No duplicates" to ensure every generated number is unique.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">5</span>
+            <span>Click "Generate" and optionally sort the results or copy them all.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Picking a random winner from a list by generating a number in a given range</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating random data for software testing and simulations</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Running raffles, lottery draws, or random prize selection</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Teaching probability and statistics concepts with live examples</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Random Number Generator"
@@ -96,6 +139,7 @@ export default function RandomNumberClient({ faqItems }: { faqItems: FaqItem[] }
         { name: "Username Generator", href: "/username-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Min / Max / Count */}
       <div className="grid grid-cols-3 gap-3 mb-4">

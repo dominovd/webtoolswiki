@@ -49,10 +49,50 @@ export default function USPhoneClient() {
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a US Phone Number Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A US phone number generator creates fake but realistically formatted American phone numbers using genuine area codes from across the United States. These numbers follow the North American Numbering Plan (NANP) format and are structurally identical to real US phone numbers — they simply haven't been assigned to any real person or business.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the US Phone Number Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select a US state to use area codes specific to that region, or choose "Any State" for a random area code from across the US.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Pick your preferred number format — (555) 555-5555, 555-555-5555, with country code +1, or others.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Choose how many phone numbers to generate at once.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Click "Generate" and copy individual numbers or use "Copy All."</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Testing phone number input fields and validation logic in web and mobile apps</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Filling sample datasets and mock databases with realistic US contact data</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating placeholder data for UI/UX prototypes and demos</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Bypassing mandatory phone number fields on websites when privacy is a concern</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="US Phone Number Generator"
       description="Generate random, valid-format US phone numbers for testing, forms, and development. Choose your state, format, and quantity."
+      guide={guide}
       relatedTools={[
         { name: "Canada Phone Number Generator", href: "/canada-phone-number-generator" },
         { name: "IMEI Generator",                href: "/imei-generator" },

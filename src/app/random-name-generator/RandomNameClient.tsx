@@ -76,6 +76,45 @@ export default function RandomNameClient({ faqItems }: { faqItems: FaqItem[] }) 
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Random Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A random name generator creates realistic-sounding fake names by combining common first names and last names from a curated database. Generated names look and feel like real people's names without being associated with any real individual, making them safe to use for testing, development, fiction, and privacy protection.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Random Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Choose a gender filter — Any, Male, or Female — to narrow the name style.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Select how many names you want to generate: 1, 5, 10, or 20 at a time.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate Names" to get a fresh batch of random names.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Click "Copy" on any individual name, or use "Copy All" to grab the full list.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Populating test databases and sample datasets with realistic names</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating placeholder names for UI/UX mockups and prototypes</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming fictional characters in stories, games, and scripts</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Filling out online forms without revealing your real identity</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Random Name Generator"
@@ -87,6 +126,7 @@ export default function RandomNameClient({ faqItems }: { faqItems: FaqItem[] }) 
         { name: "Xbox Gamertag Generator", href: "/xbox-gamertag-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       <div className="grid sm:grid-cols-2 gap-4 mb-5">
         <div>

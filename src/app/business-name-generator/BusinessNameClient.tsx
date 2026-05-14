@@ -120,6 +120,45 @@ export default function BusinessNameClient({ faqItems }: { faqItems: { q: string
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Business Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A business name generator helps entrepreneurs, startups, and brand creators brainstorm company name ideas in seconds. A strong business name should be memorable, easy to spell, and reflect what your company does. Our generator combines prefixes, nouns, and industry keywords to produce creative name ideas across four styles: Modern (clean, tech-inspired), Classic (professional), Creative (compound and made-up words), and Local (city + service).</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Business Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Optionally enter an industry keyword (e.g. "coffee", "tech", "health") to get more relevant suggestions.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Select a naming style that fits your brand: Modern, Classic, Creative, or Local.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate Names" to see 10 business name ideas instantly.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Check domain name availability for your favourite options using a domain registrar before committing.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming a new startup, e-commerce store, or small business</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Brainstorming brand identity concepts during early-stage planning</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding a unique company name when your first choice is already taken</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating agency, studio, or consultancy name ideas</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Business Name Generator"
@@ -132,6 +171,7 @@ export default function BusinessNameClient({ faqItems }: { faqItems: { q: string
         { name: "Random Name Generator", href: "/random-name-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       <div className="mb-5">
         <label className="block text-sm font-medium text-gray-700 mb-2">

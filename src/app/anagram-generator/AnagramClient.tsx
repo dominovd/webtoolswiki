@@ -51,6 +51,45 @@ export default function AnagramClient() {
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is an Anagram Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">An anagram is a word or phrase created by rearranging the letters of another word. For example, the letters in "listen" can be rearranged to spell "silent", and "astronomer" becomes "moon starer." An anagram generator automates this process by shuffling the letters in your input and generating as many unique arrangements as possible, making it a great tool for word games, puzzles, and creative writing.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Anagram Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Type a word or short phrase into the input field.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Click "Generate Anagrams" to see up to 50 unique letter arrangements.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Scan the results for real words or interesting combinations.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy any anagram that works for your puzzle, game, or creative project.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Solving anagram clues in crossword puzzles and word games</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating pen names or aliases by rearranging your real name</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Playing word games like Scrabble, Bananagrams, or Wordfeud</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding hidden words in names for creative or puzzle projects</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Anagram Generator"
@@ -78,6 +117,7 @@ export default function AnagramClient() {
           a: "Yes — this tool is great for finding all possible letter arrangements from your tiles. Combine it with a word validator for best results.",
         },
       ]}
+      guide={guide}
     >
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">Enter a word or phrase</label>

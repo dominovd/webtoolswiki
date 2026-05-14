@@ -81,6 +81,45 @@ export default function PasswordClient({ faqItems }: { faqItems: FaqItem[] }) {
     { label: "Symbols (!@#$%^&*)", value: useSymbols, set: setUseSymbols },
   ];
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Password Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A password generator is a tool that creates strong, random passwords using a combination of letters, numbers, and symbols. Unlike passwords you create yourself, randomly generated passwords are not based on dictionary words or personal information, making them far harder to crack. Using a unique strong password for every account is the single most effective way to protect your online security.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Password Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Set your desired password length using the slider — 16 characters or more is recommended for most accounts.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose which character types to include: uppercase letters, lowercase letters, numbers, and symbols.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Regenerate" to create a new password, or copy the one shown automatically.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Paste the password into your password manager for safe storage.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Securing email, banking, and social media accounts</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating passwords for new account registrations</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating API keys and temporary credentials for testing</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Replacing weak or reused passwords during a security audit</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Password Generator"
@@ -92,6 +131,7 @@ export default function PasswordClient({ faqItems }: { faqItems: FaqItem[] }) {
         { name: "Random Name Generator", href: "/random-name-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Length slider */}
       <div className="mb-5">

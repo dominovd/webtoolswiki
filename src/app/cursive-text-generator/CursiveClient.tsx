@@ -43,10 +43,50 @@ export default function CursiveClient() {
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Cursive Text Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A cursive text generator converts standard text into Unicode characters that resemble cursive or handwritten lettering styles. These are real Unicode characters — not images or fonts — so they can be copied and pasted into any app that supports text: Instagram bios, TikTok captions, Discord profiles, Twitter, WhatsApp, and more. No special font or software is needed on the receiving end.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Cursive Text Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Type or paste your text into the input box.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose from multiple styles: Script (𝓬𝓾𝓻𝓼𝓲𝓿𝓮), Bold Script (𝕭𝖔𝖑𝖉), Italic, or Double-Struck.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Copy" next to the style you want.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Paste the copied text anywhere — Instagram, TikTok, Twitter, Discord, Snapchat, and most other apps.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Decorating Instagram bios and TikTok profile names with stylish text</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Adding cursive flair to social media captions and comments</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating unique Discord usernames or server names</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Personalising messages on WhatsApp, iMessage, or Telegram</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Cursive Text Generator"
       description="Type any text and instantly convert it to cursive and fancy Unicode styles. Copy and paste anywhere — Instagram, TikTok, Twitter, Discord bios, and more."
+      guide={guide}
       relatedTools={[
         { name: "Anagram Generator",           href: "/anagram-generator" },
         { name: "Xbox Gamertag Generator",      href: "/xbox-gamertag-generator" },

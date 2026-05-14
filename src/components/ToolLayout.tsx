@@ -9,11 +9,12 @@ interface Props {
   description: string;
   icon?: string;
   children: React.ReactNode;
+  guide?: React.ReactNode;
   relatedTools?: RelatedTool[];
   faqItems?: FaqItem[];
 }
 
-export default function ToolLayout({ title, description, icon = "🛠️", children, relatedTools, faqItems }: Props) {
+export default function ToolLayout({ title, description, icon = "🛠️", children, guide, relatedTools, faqItems }: Props) {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
 
@@ -41,6 +42,13 @@ export default function ToolLayout({ title, description, icon = "🛠️", child
       <div className="mt-8 bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
         {children}
       </div>
+
+      {/* Guide / SEO content */}
+      {guide && (
+        <section className="mt-10 prose-sm text-gray-600">
+          {guide}
+        </section>
+      )}
 
       {/* FAQ */}
       {faqItems && faqItems.length > 0 && (
