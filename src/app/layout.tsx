@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     default: "WebToolsWiki – Free Online Generators & Tools",
     template: "%s | WebToolsWiki",
   },
+  verification: {
+    google: "F1D-Su6SlGUQjTYsA82Qa2rkkgw2QUfLEKK_j-CP_T8",
+  },
   description:
     "Free online generators and tools – phone numbers, text effects, gamertags, IMEI, anagrams, and more. Fast, simple, no sign-up required.",
   metadataBase: new URL("https://webtoolswiki.com"),
