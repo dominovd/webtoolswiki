@@ -62,6 +62,45 @@ export default function VampireNameClient({ faqItems }: { faqItems: { q: string;
     setTimeout(() => setCopiedAll(false), 1500);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Vampire Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A vampire name generator creates dark, aristocratic names for vampire characters in gothic fiction, horror RPGs, and Halloween events. Vampire names traditionally draw from Eastern European aristocracy, ancient Latin, and Victorian gothic naming conventions — formal, multi-syllabic, and carrying an air of ancient power. Our generator offers three styles: Classic Gothic (Dracula-inspired), Modern Vampire (short and sharp), and Ancient (Latin and Roman-sounding).</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Vampire Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Choose a gender: Male, Female, or Any.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Select a style: Classic Gothic, Modern Vampire, or Ancient.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Set how many names to generate.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy your chosen name from the purple-accented result cards.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming vampire characters in D&D (especially Curse of Strahd), Vampire: the Masquerade, and other RPGs</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating vampire protagonists and antagonists for gothic novels and horror fiction</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Choosing a vampire name for Halloween costumes, themed parties, and events</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding a dark, elegant alias for social media handles and gaming usernames</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Vampire Name Generator"
@@ -73,6 +112,7 @@ export default function VampireNameClient({ faqItems }: { faqItems: { q: string;
         { name: "Mythical Creature Generator", href: "/mythical-creature-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Gender selector */}
       <div className="mb-5">

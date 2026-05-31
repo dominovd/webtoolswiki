@@ -91,6 +91,45 @@ export default function FairyNameClient({ faqItems }: { faqItems: { q: string; a
     setTimeout(() => setCopiedAll(false), 1500);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Fairy Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A fairy name generator creates magical, whimsical names for fairy and fae characters in fantasy stories, RPGs, and creative projects. Fairy names traditionally draw from nature — flowers, elements, seasons, and woodland creatures — giving them a delicate, otherworldly quality. Our generator offers two styles: Whimsical (soft, nature-inspired names like Dewdrop or Blossom) and Dark Fae (gothic, mysterious names for the more sinister side of faerie mythology).</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Fairy Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Choose a gender: Female, Male, or Any.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Select a style: Whimsical for classic fairy names, or Dark Fae for gothic, mysterious names.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Set the quantity and click "Generate."</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Each name card shows the fairy name plus a nature-inspired title describing their role.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming fairy characters in fantasy novels, poetry, and creative writing</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating fae NPCs for D&D campaigns and Pathfinder adventures</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding fairy names for costumes, online handles, and social media aliases</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming characters in fairy-tale inspired video games and interactive fiction</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Fairy Name Generator"
@@ -102,6 +141,7 @@ export default function FairyNameClient({ faqItems }: { faqItems: { q: string; a
         { name: "Mythical Creature Generator", href: "/mythical-creature-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Gender */}
       <div className="mb-5">

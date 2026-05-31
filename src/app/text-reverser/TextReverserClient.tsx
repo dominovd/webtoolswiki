@@ -38,6 +38,45 @@ export default function TextReverserClient({ faqItems }: { faqItems: { q: string
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Text Reverser?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A text reverser flips the order of characters or words in any text string. It offers three modes: reversing all characters (so "hello" becomes "olleh"), reversing the word order (so "hello world" becomes "world hello"), or flipping each word's letters while keeping word order (so "hello world" becomes "olleh dlrow"). Reversed text is used for puzzles, ciphers, creative writing, and social media effects.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Text Reverser</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Type or paste your text into the input box — results appear instantly as you type.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Three output cards show all reversal modes simultaneously.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click Copy on whichever result you want.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Paste into messages, social media, or use it as a simple mirror cipher.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating mirror-text effects for social media posts and bios</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Writing simple ciphers or coded messages for games and puzzles</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Checking palindromes (words that read the same forwards and backwards)</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creative writing exercises and word games</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Text Reverser"
@@ -49,6 +88,7 @@ export default function TextReverserClient({ faqItems }: { faqItems: { q: string
         { name: "Weird Text Generator", href: "/weird-text-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       <div>
         <label className="block text-xs font-medium text-gray-500 mb-2">Enter your text</label>

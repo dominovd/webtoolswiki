@@ -60,6 +60,45 @@ export default function IPAddressClient({ faqItems }: { faqItems: FaqItem[] }) {
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is an IP Address?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">An IP (Internet Protocol) address is a numerical label assigned to every device on a network. IPv4 addresses are written as four groups of numbers (0–255) separated by dots, like 192.168.1.1. IPv6 uses eight groups of four hexadecimal digits, like 2001:0db8:85a3:0000:0000:8a2e:0370:7334. IPv4 offers about 4 billion unique addresses, which have been largely exhausted, driving the transition to IPv6 with its virtually unlimited address space.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the IP Address Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Choose address type: IPv4, IPv6, or Both.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Select how many addresses to generate (1–20).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate" to create random IP addresses.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy individual addresses or use "Copy All."</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Populating test databases with realistic network address data</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Testing IP validation logic and network-related form fields</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating sample datasets for networking tutorials and demos</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Simulating network logs for development and QA testing</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="IP Address Generator"
@@ -71,6 +110,7 @@ export default function IPAddressClient({ faqItems }: { faqItems: FaqItem[] }) {
         { name: "Password Generator", href: "/password-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Controls */}
       <div className="flex flex-wrap gap-4 mb-5">

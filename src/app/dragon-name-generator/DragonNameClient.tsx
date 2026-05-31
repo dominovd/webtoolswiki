@@ -77,6 +77,45 @@ export default function DragonNameClient({ faqItems }: { faqItems: { q: string; 
     setTimeout(() => setCopiedAll(false), 1500);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Dragon Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A dragon name generator creates powerful, ancient-sounding names for dragon characters in fantasy settings. Dragons are among the most iconic creatures in mythology and fantasy, and their names should reflect their age, power, and elemental nature. Our generator offers five dragon types — Ancient, Fire, Ice, Shadow, and Sea — each with names tuned to their unique personality and elemental theme, using appropriate phonetics and syllable patterns.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Dragon Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select a dragon type: Ancient (hard K/R/X sounds), Fire (aggressive consonants), Ice (crisp and sharp), Shadow (mysterious), or Sea (flowing and oceanic).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose how many names to generate.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate Dragon Names" and browse the results.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy your chosen name.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming dragon enemies and allies in D&D campaigns and Pathfinder</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating dragon characters for fantasy novels and world-building projects</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding names for dragon mounts, familiars, and companions in RPGs</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming dragons in video games and online role-playing communities</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Dragon Name Generator"
@@ -88,6 +127,7 @@ export default function DragonNameClient({ faqItems }: { faqItems: { q: string; 
         { name: "Demon Name Generator", href: "/demon-name-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Dragon type selector */}
       <div className="mb-5">

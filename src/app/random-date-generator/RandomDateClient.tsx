@@ -95,6 +95,49 @@ export default function RandomDateClient({ faqItems }: { faqItems: FaqItem[] }) 
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Random Date Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A random date generator creates dates that fall within a specified range, formatted in your chosen style. Random dates are essential in software development for testing date-handling logic, populating sample datasets, and creating realistic mock data. Instead of manually inventing dates, developers and testers use date generators to quickly produce hundreds of varied, realistic timestamps.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Random Date Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Set your start and end dates using the date pickers to define the range.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose how many dates to generate (1–50).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Select a format: US (MM/DD/YYYY), UK (DD/MM/YYYY), ISO (YYYY-MM-DD), Long (January 1, 2024), or Unix timestamp.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Toggle "No duplicates" to ensure every date is unique.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">5</span>
+            <span>Click "Generate" and copy results.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Seeding test databases with realistic date data for booking, event, or transaction records</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Testing date validation, sorting, and filtering logic in applications</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating sample datasets for data science projects and tutorials</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating fictional event timelines for writing and game design</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Random Date Generator"
@@ -106,6 +149,7 @@ export default function RandomDateClient({ faqItems }: { faqItems: FaqItem[] }) 
         { name: "Password Generator", href: "/password-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Date range */}
       <div className="grid grid-cols-2 gap-4 mb-5">

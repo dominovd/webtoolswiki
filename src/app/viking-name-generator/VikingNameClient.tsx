@@ -71,6 +71,45 @@ export default function VikingNameClient({ faqItems }: { faqItems: { q: string; 
     setTimeout(() => setCopiedAll(false), 1500);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Viking Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A Viking name generator creates authentic Old Norse names drawn from historical sagas, runic inscriptions, and Norse mythology. Viking names often reflect the natural world, warrior culture, and Norse gods — many contain elements meaning "wolf," "bear," "thunder," "wisdom," or "battle." Our generator includes real historical Viking names alongside legendary kenning-style nicknames like "Ironside" and "Bloodaxe" that reflect a warrior's greatest deeds and qualities.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Viking Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Choose a gender: Male, Female, or Any.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Select a style: Historical Norse (authentic period names), Legendary (with kenning nicknames), or Berserker (fearsome warrior names).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Set the quantity and click "Generate."</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Some names include their Old Norse meaning — copy and use your favourite.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating Viking and Norse-themed characters for D&D and tabletop RPGs</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming characters for historical fiction set in the Viking Age</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding Norse names for video games with Viking, Scandinavian, or Nordic themes</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Choosing an authentic Norse name for a themed event, LARP, or costume</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Viking Name Generator"
@@ -82,6 +121,7 @@ export default function VikingNameClient({ faqItems }: { faqItems: { q: string; 
         { name: "Demon Name Generator", href: "/demon-name-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Gender selector */}
       <div className="mb-5">

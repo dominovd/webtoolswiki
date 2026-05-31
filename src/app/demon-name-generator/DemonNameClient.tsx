@@ -75,6 +75,45 @@ export default function DemonNameClient({ faqItems }: { faqItems: { q: string; a
     setTimeout(() => setCopiedAll(false), 1500);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Demon Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A demon name generator creates dark, foreboding names for demonic characters in fantasy, horror, and tabletop RPG settings. Demon names typically use harsh consonants like K, Z, X, and R, combined with guttural vowel sounds to create an unsettling, ancient feel. Our generator organises demons by rank — from Lesser Demons to Archdevils — with each rank producing names of appropriate gravitas and power.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Demon Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select a demon rank: Lesser Demon, Greater Demon, Demon Lord, or Archdevil.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose how many names to generate.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate Demon Names."</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Each name card displays the demon's rank — copy whichever name fits your villain.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming demon antagonists and summoned creatures in D&D campaigns</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating demonic characters for horror novels and dark fantasy writing</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding names for video game bosses, final enemies, and dark NPCs</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming characters for horror role-playing games, LARPs, and Halloween events</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Demon Name Generator"
@@ -86,6 +125,7 @@ export default function DemonNameClient({ faqItems }: { faqItems: { q: string; a
         { name: "Fantasy Name Generator", href: "/fantasy-name-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Rank selector */}
       <div className="mb-5">

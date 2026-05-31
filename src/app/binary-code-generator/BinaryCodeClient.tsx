@@ -51,6 +51,45 @@ export default function BinaryCodeClient({ faqItems }: { faqItems: FaqItem[] }) 
     setCopied(false);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is Binary Code?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">Binary code is the fundamental language of computers, representing all data as sequences of 0s and 1s. Each character in standard ASCII encoding is represented by 8 binary digits (bits), called a byte. For example, the letter 'A' is 01000001 and 'a' is 01100001. Understanding binary is essential for computer science students, programmers, and anyone interested in how computers work at the hardware level.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Binary Code Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select "Text → Binary" to convert text into binary code, or "Binary → Text" to decode binary back to readable text.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Type or paste your input.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Convert" to see the result in the monospace output card.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy the result with the Copy button.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Learning how computers represent text and data at the binary level</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating binary-coded messages for puzzles, escape rooms, and games</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Studying computer science fundamentals and data encoding</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Converting text for low-level programming exercises and demonstrations</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Binary Code Generator"
@@ -62,6 +101,7 @@ export default function BinaryCodeClient({ faqItems }: { faqItems: FaqItem[] }) 
         { name: "UUID Generator", href: "/uuid-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Mode toggle */}
       <div className="flex rounded-lg overflow-hidden border border-gray-200 mb-5 w-fit">

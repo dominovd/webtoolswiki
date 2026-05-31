@@ -75,6 +75,45 @@ export default function MorseCodeClient({ faqItems }: { faqItems: FaqItem[] }) {
     setCopied(false);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is Morse Code?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">Morse code is a communication system developed in the 1830s by Samuel Morse and Alfred Vail that represents letters and numbers as sequences of dots (short signals) and dashes (long signals). It was the primary long-distance communication method before the telephone, used in telegraphy, maritime communication, and aviation. Today it's still used in amateur radio, aviation, and as an accessibility tool. SOS — the universal distress signal — is three dots, three dashes, three dots (... --- ...).</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Morse Code Translator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select direction: "Text → Morse" to encode regular text, or "Morse → Text" to decode Morse.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Type or paste your input.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Translate" to see the result.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>In Morse input, use dots (.) and dashes (-), separate letters with spaces, and separate words with a forward slash (/).</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Learning Morse code for amateur radio (ham radio) licensing</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Encoding secret messages for escape rooms and treasure hunts</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Decoding Morse code from military history books and films</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating Morse-coded creative content for social media and puzzles</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Morse Code Translator"
@@ -86,6 +125,7 @@ export default function MorseCodeClient({ faqItems }: { faqItems: FaqItem[] }) {
         { name: "Case Converter", href: "/case-converter" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Mode toggle */}
       <div className="flex rounded-lg overflow-hidden border border-gray-200 mb-5 w-fit">

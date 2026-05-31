@@ -96,6 +96,45 @@ export default function LoremIpsumClient({ faqItems }: { faqItems: { q: string; 
   const wordCount = result ? result.trim().split(/\s+/).filter(Boolean).length : 0;
   const charCount = result.length;
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is Lorem Ipsum?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">Lorem Ipsum is the standard placeholder text used by designers, developers, and publishers when the actual content is not yet available. It has been the industry standard since the 1500s, originating from a work by the Roman philosopher Cicero. Using placeholder text lets you evaluate the visual layout and typography of a design without being distracted by the meaning of the words.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Lorem Ipsum Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select a unit type: Paragraphs (for blocks of text), Sentences (for shorter sections), or Words (for precise amounts).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Set the quantity using the number input.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Toggle "Start with Lorem ipsum…" to use the classic opening sentence.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Click "Generate" and copy the result with the Copy button.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Filling wireframes and UI mockups with realistic-looking text</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Testing typography, font sizes, and line spacing in web designs</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating dummy content for CMS and database development</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating placeholder text for print layouts, brochures, and presentations</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Lorem Ipsum Generator"
@@ -107,6 +146,7 @@ export default function LoremIpsumClient({ faqItems }: { faqItems: { q: string; 
         { name: "Text Reverser", href: "/text-reverser" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Mode selector */}
       <div className="flex gap-2">

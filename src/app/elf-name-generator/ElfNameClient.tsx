@@ -79,6 +79,45 @@ export default function ElfNameClient({ faqItems }: { faqItems: { q: string; a: 
     setTimeout(() => setCopiedAll(false), 1500);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is an Elf Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">An elf name generator creates authentic-sounding elvish names with the lyrical, flowing quality characteristic of elves in Tolkien-inspired fantasy. Elvish names typically feature soft consonants, long vowels, and melodic syllable combinations. Our generator uses a syllable-based system to create near-infinite unique names, so you'll never run out of options for your elven characters, whether they're wood elves, high elves, dark elves, or sea elves.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Elf Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select a gender: Male, Female, or Any.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose how many names to generate.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate Elf Names" to see results — each name comes with a suggested elven meaning.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy your favourite name and use it for your character.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating elf character names for D&D, Pathfinder, and other RPGs</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming elven characters in fantasy novels, short stories, and fan fiction</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding elvish names for video game characters in MMOs and RPGs</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating name ideas for elven NPCs in homebrew D&D campaigns</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Elf Name Generator"
@@ -90,6 +129,7 @@ export default function ElfNameClient({ faqItems }: { faqItems: { q: string; a: 
         { name: "Fairy Name Generator", href: "/fairy-name-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Gender */}
       <div className="mb-5">

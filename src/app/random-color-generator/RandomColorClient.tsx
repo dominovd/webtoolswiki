@@ -89,6 +89,45 @@ export default function RandomColorClient({ faqItems }: { faqItems: FaqItem[] })
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Random Color Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A random color generator creates colors at random and displays their HEX, RGB, and HSL values. Designers use random color generators for inspiration, to discover unexpected palettes, and to quickly prototype color schemes. Our generator offers two modes: single color (great for picking one accent color) and palette mode (which generates 5 harmonious-looking colors at once for full design schemes).</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Random Color Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Choose "Single Color" to generate one color, or "Color Palette" to generate 5 colors at once.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Click "Generate" to get a random color or palette.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Use the lock toggle to lock a color you like while regenerating the rest.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy HEX, RGB, or HSL values individually, or use "Copy All HEX" for the full palette.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding inspiration for website and app color schemes</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Quickly picking accent colors for UI elements and buttons</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating random palettes for illustration and graphic design projects</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating test data with realistic color values for front-end development</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Random Color Generator"
@@ -100,6 +139,7 @@ export default function RandomColorClient({ faqItems }: { faqItems: FaqItem[] })
         { name: "UUID Generator", href: "/uuid-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Mode selector */}
       <div className="flex gap-2 mb-6">

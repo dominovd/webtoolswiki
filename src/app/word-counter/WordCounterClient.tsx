@@ -49,6 +49,45 @@ export default function WordCounterClient({ faqItems }: { faqItems: { q: string;
     { label: "Reading time", value: stats.readingTime },
   ];
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Word Counter?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A word counter is an online text analysis tool that instantly counts the words, characters, sentences, paragraphs, and reading time of any text you paste or type. Writers, students, and content creators use word counters to meet word count requirements for essays, articles, blog posts, and social media captions. Unlike the word count feature in Microsoft Word, an online word counter works instantly on any device without installing software.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Word Counter</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Paste or type your text into the large input area.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Stats update instantly: word count, character count (with and without spaces), sentence count, paragraph count, and estimated reading time.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Scroll down to see your most frequently used words.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Click "Clear" to reset and analyse a new piece of text.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Checking essay or article word counts for school or publication requirements</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Ensuring social media posts meet platform character limits</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Estimating reading time for blog posts and web content</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Identifying overused words to improve writing variety</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Word Counter"
@@ -60,6 +99,7 @@ export default function WordCounterClient({ faqItems }: { faqItems: { q: string;
         { name: "Lorem Ipsum Generator", href: "/lorem-ipsum-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       <div>
         <label className="block text-xs font-medium text-gray-500 mb-2">Paste or type your text</label>

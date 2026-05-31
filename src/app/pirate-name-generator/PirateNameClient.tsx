@@ -59,6 +59,45 @@ export default function PirateNameClient({ faqItems }: { faqItems: { q: string; 
     setTimeout(() => setCopiedAll(false), 1500);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Pirate Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A pirate name generator creates swashbuckling pirate aliases for games, costumes, parties, and creative projects. Pirate names traditionally combine a colourful adjective with a given name and a fearsome title — think "Salty Pete the Merciless" or "Iron Morgan the Dread." Our generator offers three styles: Classic (traditional pirate-name format), Funny (ridiculous and comedic), and Fearsome (dark and terrifying ship names).</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Pirate Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select a style: Classic, Funny, or Fearsome.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose how many names to generate.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Click "Generate Pirate Names."</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy your favourite from the amber-themed result cards.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding a pirate name for International Talk Like a Pirate Day (September 19th)</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming pirate characters for D&D, Pathfinder, and nautical RPG campaigns</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Choosing a pirate alias for Halloween costumes and themed parties</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating pirate ship and crew names for tabletop war games and strategy games</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Pirate Name Generator"
@@ -70,6 +109,7 @@ export default function PirateNameClient({ faqItems }: { faqItems: { q: string; 
         { name: "Fantasy Name Generator", href: "/fantasy-name-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Style selector */}
       <div className="mb-5">

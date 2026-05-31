@@ -68,6 +68,45 @@ export default function FantasyNameClient({ faqItems }: { faqItems: { q: string;
     setTimeout(() => setCopiedAll(false), 1500);
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Fantasy Name Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A fantasy name generator creates unique character names for tabletop RPGs, novels, video games, and creative writing. Different fantasy races have distinct naming conventions: elves use flowing, melodic names; dwarves use hard, guttural sounds; orcs use aggressive consonants; wizards use mystical, ancient-sounding names. Our generator covers six major fantasy archetypes so you can find the perfect name for any character, regardless of their race or role.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Fantasy Name Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select a race or archetype: Human, Elf, Dwarf, Orc, Wizard, or Rogue.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose a gender: Male, Female, or Any.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Set how many names to generate (1, 5, or 10).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Click "Generate" and copy any name you like.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming D&D, Pathfinder, or other tabletop RPG characters</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating character names for fantasy novels and short stories</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Finding NPC names for dungeon masters and game masters</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Naming characters in video games, MMOs, and online role-playing</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Fantasy Name Generator"
@@ -79,6 +118,7 @@ export default function FantasyNameClient({ faqItems }: { faqItems: { q: string;
         { name: "Quirk Generator", href: "/quirk-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Race selector */}
       <div className="mb-5">

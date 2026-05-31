@@ -69,6 +69,45 @@ export default function CaseConverterClient({ faqItems }: { faqItems: { q: strin
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Case Converter?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A case converter transforms text between different capitalisation styles with one click. Whether you need to convert a headline to Title Case, fix an all-caps paste to sentence case, or format variable names as camelCase or snake_case for programming, a case converter saves time and eliminates manual retyping. It's one of the most-used text utilities for writers, developers, and content editors.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Case Converter</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Type or paste your text into the input box.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Click any of the 8 conversion buttons: UPPERCASE, lowercase, Title Case, Sentence case, aLtErNaTiNg, camelCase, snake_case, or kebab-case.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>The converted result appears instantly in the result card below.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Click Copy to copy the converted text to your clipboard.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Converting copied text to the correct case for documents and presentations</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Formatting variable names in camelCase or snake_case for programming</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Fixing accidentally capitalised text (e.g. when CAPS LOCK was on)</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Converting titles and headings to Title Case for articles and blog posts</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Case Converter"
@@ -80,6 +119,7 @@ export default function CaseConverterClient({ faqItems }: { faqItems: { q: strin
         { name: "Lorem Ipsum Generator", href: "/lorem-ipsum-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       <div>
         <label className="block text-xs font-medium text-gray-500 mb-2">Enter your text</label>

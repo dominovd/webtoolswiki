@@ -73,6 +73,45 @@ export default function HashClient({ faqItems }: { faqItems: FaqItem[] }) {
     }
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a Hash Generator?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A hash generator takes any input text and produces a fixed-length string of characters using a cryptographic algorithm. Hash functions are one-way: the same input always produces the same hash, but it's computationally infeasible to reverse the hash back to the original text. Hashing is used to verify file integrity, store passwords securely, create digital signatures, and detect data tampering. Our generator uses the browser's built-in Web Crypto API, so your text never leaves your device.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the Hash Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Type or paste the text you want to hash into the input area.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Click "Generate Hashes" (or press Ctrl+Enter).</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>All four hash algorithms run simultaneously: SHA-1, SHA-256, SHA-384, and SHA-512.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Copy any individual hash using the Copy button next to it.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Verifying file integrity by comparing hash values before and after transfer</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Learning about cryptographic hash functions for security coursework</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating checksums for software packages and downloads</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Testing hash-based authentication and data validation logic in development</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="Hash Generator"
@@ -84,6 +123,7 @@ export default function HashClient({ faqItems }: { faqItems: FaqItem[] }) {
         { name: "Binary Code Generator", href: "/binary-code-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Input */}
       <div className="mb-4">

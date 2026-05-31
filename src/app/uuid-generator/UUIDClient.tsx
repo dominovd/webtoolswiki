@@ -50,6 +50,45 @@ export default function UUIDClient({ faqItems }: { faqItems: FaqItem[] }) {
     });
   };
 
+  const guide = (
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-2">What is a UUID?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed">A UUID (Universally Unique Identifier) is a 128-bit number used to uniquely identify information in computer systems without requiring a central authority to manage the IDs. UUID version 4 — the most common type — is randomly generated, giving it 2¹²² possible values. The probability of generating the same UUID twice is astronomically small, making UUIDs ideal for database primary keys, session tokens, API request IDs, and distributed systems where uniqueness must be guaranteed across multiple servers.</p>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">How to use the UUID Generator</h2>
+        <ol className="space-y-2">
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">1</span>
+            <span>Select how many UUIDs to generate: 1, 5, 10, 25, 50, or 100.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">2</span>
+            <span>Choose uppercase or lowercase format.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">3</span>
+            <span>Toggle hyphens on or off as needed.</span>
+          </li>
+          <li className="flex gap-3 text-sm text-gray-600">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-indigo-100 text-indigo-700 text-xs font-semibold flex items-center justify-center">4</span>
+            <span>Click "Generate" and copy individual UUIDs or use "Copy All" for the full list.</span>
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Common uses</h2>
+        <ul className="space-y-1.5">
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Generating database primary keys for PostgreSQL, MySQL, or MongoDB</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Creating unique session tokens and API request identifiers</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Seeding test databases with realistic unique IDs</span></li>
+          <li className="flex gap-2 text-sm text-gray-600"><span className="text-indigo-400">→</span><span>Identifying records in distributed systems and microservices</span></li>
+        </ul>
+      </div>
+    </div>
+  );
+
   return (
     <ToolLayout
       title="UUID Generator"
@@ -61,6 +100,7 @@ export default function UUIDClient({ faqItems }: { faqItems: FaqItem[] }) {
         { name: "Hash Generator", href: "/hash-generator" },
       ]}
       faqItems={faqItems}
+      guide={guide}
     >
       {/* Controls */}
       <div className="flex flex-wrap gap-4 mb-5">
