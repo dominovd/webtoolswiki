@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 const baseUrl = "https://webtoolswiki.com";
-const lastMod = new Date("2026-05-13");
+const lastMod = new Date("2026-05-31");
 
 const tools = [
   // High-traffic tools
@@ -38,6 +38,29 @@ const tools = [
   { url: "/nickname-generator",              priority: 0.8 },
   { url: "/team-name-generator",             priority: 0.8 },
   { url: "/rap-name-generator",              priority: 0.7 },
+  // Fantasy name generators
+  { url: "/fantasy-name-generator",         priority: 0.8 },
+  { url: "/elf-name-generator",             priority: 0.8 },
+  { url: "/dragon-name-generator",          priority: 0.8 },
+  { url: "/fairy-name-generator",           priority: 0.8 },
+  { url: "/demon-name-generator",           priority: 0.8 },
+  { url: "/viking-name-generator",          priority: 0.8 },
+  { url: "/vampire-name-generator",         priority: 0.8 },
+  { url: "/pirate-name-generator",          priority: 0.8 },
+  // Text utilities
+  { url: "/word-counter",                    priority: 0.9 },
+  { url: "/lorem-ipsum-generator",           priority: 0.9 },
+  { url: "/case-converter",                  priority: 0.8 },
+  { url: "/text-reverser",                   priority: 0.7 },
+  // Encode / technical
+  { url: "/morse-code-translator",           priority: 0.8 },
+  { url: "/binary-code-generator",           priority: 0.8 },
+  { url: "/uuid-generator",                  priority: 0.8 },
+  { url: "/ip-address-generator",            priority: 0.7 },
+  { url: "/random-date-generator",           priority: 0.7 },
+  // Dev tools
+  { url: "/random-color-generator",          priority: 0.8 },
+  { url: "/hash-generator",                  priority: 0.8 },
   // Static pages
   { url: "/about",                           priority: 0.5 },
   { url: "/contact",                         priority: 0.5 },

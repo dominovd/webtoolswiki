@@ -52,6 +52,43 @@ const categories = [
     ],
   },
   {
+    label: "Text utilities",
+    color: "bg-orange-500",
+    tools: [
+      { name: "Word Counter", href: "/word-counter", desc: "Count words, characters, sentences & reading time", icon: "📝" },
+      { name: "Lorem Ipsum Generator", href: "/lorem-ipsum-generator", desc: "Generate placeholder text for designs & mockups", icon: "📄" },
+      { name: "Case Converter", href: "/case-converter", desc: "UPPERCASE, lowercase, camelCase, snake_case & more", icon: "Aa" },
+      { name: "Text Reverser", href: "/text-reverser", desc: "Reverse text by characters, words, or flip each word", icon: "↩" },
+      { name: "Morse Code Translator", href: "/morse-code-translator", desc: "Convert text to Morse code and back", icon: "·-" },
+      { name: "Binary Code Generator", href: "/binary-code-generator", desc: "Translate text to binary and binary to text", icon: "01" },
+    ],
+  },
+  {
+    label: "Developer tools",
+    color: "bg-slate-600",
+    tools: [
+      { name: "UUID Generator", href: "/uuid-generator", desc: "Generate v4 UUIDs for databases & APIs", icon: "#" },
+      { name: "Random Color Generator", href: "/random-color-generator", desc: "Random HEX, RGB & HSL colors and palettes", icon: "🎨" },
+      { name: "Hash Generator", href: "/hash-generator", desc: "SHA-256, SHA-512 & more via Web Crypto API", icon: "🔑" },
+      { name: "IP Address Generator", href: "/ip-address-generator", desc: "Random IPv4 and IPv6 addresses for testing", icon: "🌐" },
+      { name: "Random Date Generator", href: "/random-date-generator", desc: "Random dates in any range and format", icon: "📅" },
+    ],
+  },
+  {
+    label: "Fantasy name generators",
+    color: "bg-purple-600",
+    tools: [
+      { name: "Fantasy Name Generator", href: "/fantasy-name-generator", desc: "Human, Elf, Dwarf, Orc, Wizard & Rogue names", icon: "⚔️" },
+      { name: "Elf Name Generator", href: "/elf-name-generator", desc: "Flowing elvish names with meanings", icon: "🌿" },
+      { name: "Dragon Name Generator", href: "/dragon-name-generator", desc: "Ancient, Fire, Ice, Shadow & Sea dragon names", icon: "🐉" },
+      { name: "Fairy Name Generator", href: "/fairy-name-generator", desc: "Whimsical and Dark Fae fairy names", icon: "🧚" },
+      { name: "Demon Name Generator", href: "/demon-name-generator", desc: "Dark demonic names by rank", icon: "😈" },
+      { name: "Viking Name Generator", href: "/viking-name-generator", desc: "Authentic Old Norse names with meanings", icon: "⚔️" },
+      { name: "Vampire Name Generator", href: "/vampire-name-generator", desc: "Gothic, modern and ancient vampire names", icon: "🧛" },
+      { name: "Pirate Name Generator", href: "/pirate-name-generator", desc: "Classic, funny & fearsome pirate names", icon: "🏴‍☠️" },
+    ],
+  },
+  {
     label: "Utility generators",
     color: "bg-teal-600",
     tools: [
@@ -79,9 +116,9 @@ const categories = [
 ];
 
 const stats = [
-  { num: "29+", label: "Free tools" },
-  { num: "700K+", label: "Monthly searches" },
+  { num: "48+", label: "Free tools" },
   { num: "0", label: "Sign-ups needed" },
+  { num: "100%", label: "Free forever" },
 ];
 
 const features = [
