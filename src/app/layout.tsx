@@ -44,22 +44,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${geist.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-white text-gray-900">
 
-        {/* Affiliate top bar */}
-        <div className="bg-violet-50 border-b border-violet-100 py-2 px-4 flex items-center justify-center gap-2 text-sm">
-          <span className="text-violet-700">Is your website down?</span>
-          <a
-            href="https://isitdownstatus.com/en"
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="font-medium text-indigo-600 hover:underline flex items-center gap-1"
-          >
-            Check on IsItDownStatus.com
-            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
-              <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-            </svg>
-          </a>
-        </div>
-
         {/* Header */}
         <header className="border-b border-gray-100 bg-white sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-13">
@@ -110,13 +94,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <span className="text-sm font-medium text-gray-900">WebToolsWiki</span>
                 </div>
                 <p className="text-xs text-gray-400 leading-relaxed">Free online generators and tools. No sign-up required.</p>
-                <p className="mt-3 text-xs text-gray-400 flex items-center gap-1">
-                  Partner:{" "}
-                  <a href="https://isitdownstatus.com/en" target="_blank" rel="noopener noreferrer sponsored"
-                    className="text-indigo-500 font-medium hover:underline">
-                    IsItDownStatus.com
-                  </a>
-                </p>
               </div>
 
               <div>
